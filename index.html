@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>多言語辞典</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>多言語辞典</h1>
+  <p class="sub">日本語の単語を入力すると、25言語それぞれの辞書（Wiktionary）の語釈と、その日本語訳を表示します。APIキー・費用は不要です。</p>
+  <form id="form">
+    <input id="q" placeholder="例：橋、さくら、勉強" autocomplete="off" maxlength="30">
+    <button class="go" id="btn">検索</button>
+  </form>
+  <div id="status"></div>
+  <div class="grid" id="grid"></div>
+  <p class="note">語釈は各言語版 Wiktionary（CC BY-SA 4.0）から取得し、日本語訳は機械翻訳です。語釈が短すぎる・項目がない場合は、その言語版 Wikipedia（CC BY-SA 4.0）の冒頭要約、それもなければ英語版 Wiktionary の英語の語釈で補い、カード内に出典を表示します。訳語の候補は機械翻訳の辞書データによるため、専門的な用途では原典の辞書でご確認ください。</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
